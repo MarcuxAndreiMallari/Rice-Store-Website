@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback — Zannie's Rice Store</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand">
+        <div class="brand-mark">🌾</div>
+        <div class="brand-text">
+          Zannie's Rice Store
+          <span>Premium Grains · Fair Prices</span>
+        </div>
+      </a>
+    </div>
+  </header>
+
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="feedback.html" class="active">Feedback</a></li>
+        <li><a href="community.html">Community</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <h2 class="section-title">We Value Your Feedback</h2>
+    <p class="section-subtitle">Tell us how we're doing or how we can improve. Your thoughts help us serve you better.</p>
+
+    <div class="card form-card">
+      <form id="feedbackForm">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email or Phone</label>
+          <input type="text" id="email" name="email" placeholder="email@example.com or phone number" required>
+        </div>
+        <div class="form-group">
+          <label for="feedback">Your Feedback</label>
+          <textarea id="feedback" name="feedback" placeholder="Share your experience or suggestions..." required></textarea>
+        </div>
+        <button type="submit" class="btn" style="width: 100%;">Submit Feedback</button>
+      </form>
+      <div id="responseMessage" class="success-msg">
+        Thank you for your feedback! We truly appreciate your input.
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Zannie's Rice Store. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('responseMessage').style.display = 'block';
+      this.reset();
+      document.getElementById('responseMessage').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  </script>
+</body>
+</html>
